@@ -1,0 +1,697 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnlogin.github.io/news/article-112059.htm" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>用PAC文件在iOS上实现科学上网：一站式配置与进阶指南</title>
+        <meta name="description" content="在如今复杂多变的网络环境中，自由、安全地访问互联网已不再是一个单纯的技术问题，而是关系到信息获取与数字权益的现实需求。特别是在某些网络环境受限的地区，用户希望通过技术手段“科学上网”——即绕过审查与封" />
+        <link rel="icon" href="/assets/website/img/vmess_node/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN Login 订阅中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnlogin.github.io/news/article-112059.htm" />
+    <meta property="og:site_name" content="VPN Login 订阅中文网" />
+    <meta property="og:title" content="用PAC文件在iOS上实现科学上网：一站式配置与进阶指南" />
+    <meta property="og:image" content="https://vpnlogin.github.io/uploads/20240804-1/a53c018f106ec413bd1e08009914a89f.webp" />
+        <meta property="og:release_date" content="2025-05-05T09:02:02" />
+    <meta property="og:updated_time" content="2025-05-05T09:02:02" />
+        <meta property="og:description" content="在如今复杂多变的网络环境中，自由、安全地访问互联网已不再是一个单纯的技术问题，而是关系到信息获取与数字权益的现实需求。特别是在某些网络环境受限的地区，用户希望通过技术手段“科学上网”——即绕过审查与封" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="用PAC文件在iOS上实现科学上网：一站式配置与进阶指南">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- google fonts -->
+    <link href="//fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/assets/website/css/vmess_node/style-starter.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KBC970KMK2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KBC970KMK2');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854" crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--header-->
+    <div class="w3l-top-header">
+        <header id="site-header" class="fixed-top">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-dark stroke">
+                    <a class="navbar-brand" href="/">
+                                        <span>VPN Login</span>
+                                        </a>
+                    <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                        <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                        <ul class="navbar-nav mx-auto">
+                                                        <li class="nav-item">
+                                <a class="nav-link" href="/">首页</a>
+                            </li>
+                                                        <li class="nav-item">
+                                <a class="nav-link" href="/paid-subscribe/">推荐机场</a>
+                            </li>
+                                                        <li class="nav-item">
+                                <a class="nav-link" href="/news/">新闻资讯</a>
+                            </li>
+                                                        <li class="nav-item">
+                                <a class="nav-link" href="/client.htm">客户端</a>
+                            </li>
+                                                    </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <!--/header-->
+    <!-- breadcrum -->
+    <section class="w3l-deal-breadcrum">
+        <div class="breadcrum py-5">
+            <div class="container">
+                <h1>用PAC文件在iOS上实现科学上网：一站式配置与进阶指南</h1>
+                <p><a href="/">首页</a> &nbsp; / &nbsp; <a href="/news/">新闻资讯</a>  &nbsp; / &nbsp; 正文</p>
+            </div>
+        </div>
+    </section>
+    <!-- //breadcrum -->
+        <!-- //stats -->
+    <section class="w3l-index2 py-5" id="about">
+        <div class="container py-lg-3">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                    
+<p data-start="32" data-end="150" class="">在如今复杂多变的网络环境中，自由、安全地访问互联网已不再是一个单纯的技术问题，而是关系到信息获取与数字权益的现实需求。特别是在某些网络环境受限的地区，用户希望通过技术手段“科学上网”——即绕过审查与封锁，实现对全球互联网资源的自由访问。</p>
+<p data-start="152" data-end="255" class="">在众多科学上网方案中，<strong data-start="163" data-end="191">PAC（Proxy Auto-Config）文件</strong>提供了一种既轻巧又高效的解决方式。对于iOS用户而言，如何正确配置PAC文件，将直接影响使用体验的便捷性、连通性乃至网络安全性。</p>
+<p data-start="257" data-end="339" class="">本文将以详实的步骤、实例化的讲解，带你全面掌握<strong data-start="280" data-end="304">在iOS设备上使用PAC文件进行科学上网</strong>的完整过程，从配置基础到进阶优化，全方位提升你的上网自由度与使用效率。</p>
+<hr data-start="341" data-end="344" class="">
+<h2 data-start="346" data-end="371" class="">一、什么是PAC文件？它到底解决了什么问题？</h2>
+<p data-start="373" data-end="512" class="">PAC（Proxy Auto-Config）文件是一种JavaScript脚本文件，用于定义网络流量应通过哪一个代理服务器进行传输。其原理基于一个函数<code data-start="448" data-end="476">FindProxyForURL(url, host)</code>，该函数可根据访问的网址或主机名自动返回一个“走代理”或“直连”的指令。</p>
+<h3 data-start="514" data-end="527" class="">PAC的工作机制：</h3>
+<ul data-start="529" data-end="634">
+<li data-start="529" data-end="564" class="">
+<p data-start="531" data-end="564" class=""><strong data-start="531" data-end="539">智能分流</strong>：比如访问Google走代理，访问国内网站则直连；</p>
+</li>
+<li data-start="565" data-end="599" class="">
+<p data-start="567" data-end="599" class=""><strong data-start="567" data-end="577">自动代理切换</strong>：可根据访问目标或网络条件灵活切换不同节点；</p>
+</li>
+<li data-start="600" data-end="634" class="">
+<p data-start="602" data-end="634" class=""><strong data-start="602" data-end="615">不依赖第三方App</strong>：无需安装额外应用，即可实现按需代理。</p>
+</li>
+</ul>
+<p data-start="636" data-end="709" class="">简而言之，PAC文件就是一个“规则表+逻辑引擎”，通过它，用户无需手动切换任何代理设置，就可以在不同的网络访问需求之间<strong data-start="695" data-end="708">自动完成选择与调度</strong>。</p>
+<hr data-start="711" data-end="714" class="">
+<h2 data-start="716" data-end="741" class="">二、为什么选择在iOS系统中使用PAC文件？</h2>
+<p data-start="743" data-end="854" class="">在iOS系统中，由于系统封闭性强，许多传统的VPN或代理配置方式受限。相比之下，PAC文件所依赖的是系统的<strong data-start="796" data-end="814">Wi-Fi HTTP代理设置</strong>，无须越狱、安装App或篡改系统文件，也无需全局生效，因此尤其适合以下用户场景：</p>
+<ul data-start="856" data-end="973">
+<li data-start="856" data-end="899" class="">
+<p data-start="858" data-end="899" class=""><strong data-start="858" data-end="870">轻度科学上网需求</strong>（如访问Google、YouTube、Telegram）；</p>
+</li>
+<li data-start="900" data-end="919" class="">
+<p data-start="902" data-end="919" class=""><strong data-start="902" data-end="918">避免第三方App隐私泄露</strong>；</p>
+</li>
+<li data-start="920" data-end="943" class="">
+<p data-start="922" data-end="943" class=""><strong data-start="922" data-end="942">对特定网站使用代理，其他流量直连</strong>；</p>
+</li>
+<li data-start="944" data-end="973" class="">
+<p data-start="946" data-end="973" class=""><strong data-start="946" data-end="972">家庭Wi-Fi环境下使用，便于统一配置多设备</strong>。</p>
+</li>
+</ul>
+<hr data-start="975" data-end="978" class="">
+<h2 data-start="980" data-end="1001" class="">三、PAC文件如何编写？文件结构简析</h2>
+<p data-start="1003" data-end="1019" class="">一个最基本的PAC文件示例如下：</p>
+<pre class="overflow-visible!" data-start="1021" data-end="1230"><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">javascript</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-javascript"><span><span><span class="hljs-keyword">function</span></span><span> </span><span><span class="hljs-title function_">FindProxyForURL</span></span><span>(</span><span><span class="hljs-params">url, host</span></span><span>) {
+    </span><span><span class="hljs-keyword">if</span></span><span> (</span><span><span class="hljs-title function_">shExpMatch</span></span><span>(host, </span><span><span class="hljs-string">"*.google.com"</span></span><span>) || </span><span><span class="hljs-title function_">dnsDomainIs</span></span><span>(host, </span><span><span class="hljs-string">"youtube.com"</span></span><span>)) {
+        </span><span><span class="hljs-keyword">return</span></span><span> </span><span><span class="hljs-string">"PROXY 123.123.123.123:1080"</span></span><span>;
+    }
+    </span><span><span class="hljs-keyword">return</span></span><span> </span><span><span class="hljs-string">"DIRECT"</span></span><span>;
+}
+</span></span></code></div></div></pre>
+<h3 data-start="1232" data-end="1243" class="">常用语法说明：</h3>
+<ul data-start="1245" data-end="1413">
+<li data-start="1245" data-end="1275" class="">
+<p data-start="1247" data-end="1275" class=""><code data-start="1247" data-end="1266">PROXY [IP]:[PORT]</code>：指定代理服务器；</p>
+</li>
+<li data-start="1276" data-end="1297" class="">
+<p data-start="1278" data-end="1297" class=""><code data-start="1278" data-end="1286">DIRECT</code>：直接连接，不走代理；</p>
+</li>
+<li data-start="1298" data-end="1334" class="">
+<p data-start="1300" data-end="1334" class=""><code data-start="1300" data-end="1327">shExpMatch(host, pattern)</code>：匹配通配符；</p>
+</li>
+<li data-start="1335" data-end="1372" class="">
+<p data-start="1337" data-end="1372" class=""><code data-start="1337" data-end="1364">dnsDomainIs(host, domain)</code>：匹配域名后缀；</p>
+</li>
+<li data-start="1373" data-end="1413" class="">
+<p data-start="1375" data-end="1413" class=""><code data-start="1375" data-end="1398">isPlainHostName(host)</code>：判断是否为无域名的本地名称。</p>
+</li>
+</ul>
+<p data-start="1415" data-end="1463" class="">通过组合这些条件，你可以创建一个功能丰富、分流精准的PAC文件，以达到最大化访问效率与隐私控制。</p>
+<hr data-start="1465" data-end="1468" class="">
+<h2 data-start="1470" data-end="1497" class="">四、如何在iOS上配置PAC文件？实操全流程详解</h2>
+<p data-start="1499" data-end="1543" class="">以下步骤将引导你在<strong data-start="1508" data-end="1522">不安装任何第三方工具</strong>的前提下，配置PAC文件完成科学上网设置。</p>
+<h3 data-start="1545" data-end="1563" class="">第一步：获取可靠的PAC文件</h3>
+<p data-start="1565" data-end="1582" class="">你可以通过以下方式获取PAC文件：</p>
+<ol data-start="1584" data-end="1743">
+<li data-start="1584" data-end="1626" class="">
+<p data-start="1587" data-end="1626" class=""><strong data-start="1587" data-end="1601">使用在线PAC生成器</strong>（如GoProxy、Subconverter等）；</p>
+</li>
+<li data-start="1627" data-end="1643" class="">
+<p data-start="1630" data-end="1643" class=""><strong data-start="1630" data-end="1642">向服务提供商索取</strong>；</p>
+</li>
+<li data-start="1644" data-end="1677" class="">
+<p data-start="1647" data-end="1677" class=""><strong data-start="1647" data-end="1676">自行编写并部署到服务器或GitHub Pages上</strong>；</p>
+</li>
+<li data-start="1678" data-end="1743" class="">
+<p data-start="1681" data-end="1696" class=""><strong data-start="1681" data-end="1693">使用现成托管服务</strong>，如：</p>
+<pre class="overflow-visible!" data-start="1700" data-end="1743"><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">arduino</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre!"><span><span>https:</span><span><span class="hljs-comment">//example.com/proxy.pac</span></span><span>
+</span></span></code></div></div></pre>
+</li>
+</ol>
+<p data-start="1745" data-end="1780" class="">⚠️ 提醒：确保该URL支持HTTPS协议，并可在iOS设备正常访问。</p>
+<hr data-start="1782" data-end="1785" class="">
+<h3 data-start="1787" data-end="1809" class="">第二步：将PAC文件配置至iOS系统</h3>
+<ol data-start="1811" data-end="1985">
+<li data-start="1811" data-end="1840" class="">
+<p data-start="1814" data-end="1840" class="">打开 iOS 的 <strong data-start="1823" data-end="1839">设置（Settings）</strong>；</p>
+</li>
+<li data-start="1841" data-end="1868" class="">
+<p data-start="1844" data-end="1868" class="">点击 <strong data-start="1847" data-end="1856">Wi-Fi</strong>，找到你当前连接的网络；</p>
+</li>
+<li data-start="1869" data-end="1887" class="">
+<p data-start="1872" data-end="1887" class="">点击右侧的 “i” 信息图标；</p>
+</li>
+<li data-start="1888" data-end="1919" class="">
+<p data-start="1891" data-end="1919" class="">下拉找到 <strong data-start="1896" data-end="1918">HTTP代理（HTTP Proxy）</strong>；</p>
+</li>
+<li data-start="1920" data-end="1939" class="">
+<p data-start="1923" data-end="1939" class="">选择 <strong data-start="1926" data-end="1938">自动（Auto）</strong>；</p>
+</li>
+<li data-start="1940" data-end="1966" class="">
+<p data-start="1943" data-end="1966" class="">在 <strong data-start="1945" data-end="1952">URL</strong> 栏粘贴你PAC文件的地址；</p>
+</li>
+<li data-start="1967" data-end="1985" class="">
+<p data-start="1970" data-end="1985" class="">返回上级菜单，设置将自动保存。</p>
+</li>
+</ol>
+<p data-start="1987" data-end="2026" class="">完成以上步骤后，iOS系统将自动调用PAC文件中的代理逻辑，进行网络流量分发。</p>
+<hr data-start="2028" data-end="2031" class="">
+<h3 data-start="2033" data-end="2049" class="">第三步：测试是否设置成功</h3>
+<p data-start="2051" data-end="2070" class="">配置完成后，可以通过以下方式测试效果：</p>
+<ul data-start="2072" data-end="2188">
+<li data-start="2072" data-end="2124" class="">
+<p data-start="2074" data-end="2124" class="">使用 Safari 访问 <code data-start="2087" data-end="2103">www.google.com</code> 或 <code data-start="2106" data-end="2123">www.youtube.com</code>；</p>
+</li>
+<li data-start="2125" data-end="2158" class="">
+<p data-start="2127" data-end="2158" class="">打开 <code data-start="2130" data-end="2146">whatismyip.com</code>，确认IP是否发生变化；</p>
+</li>
+<li data-start="2159" data-end="2188" class="">
+<p data-start="2161" data-end="2188" class="">若代理节点不可达，将自动走直连（如果PAC配置正确）。</p>
+</li>
+</ul>
+<p data-start="2190" data-end="2241" class="">如有需要，也可以访问 <code data-start="2201" data-end="2223">pac-test.example.com</code>（模拟域名）来验证分流规则是否生效。</p>
+<hr data-start="2243" data-end="2246" class="">
+<h2 data-start="2248" data-end="2273" class="">五、使用PAC文件过程中的常见问题与排查建议</h2>
+<div class="_tableContainer_16hzy_1"><div tabindex="-1" class="_tableWrapper_16hzy_14 group flex w-fit flex-col-reverse"><table data-start="2275" data-end="2516" class="w-fit min-w-(--thread-content-width)"><thead data-start="2275" data-end="2293"><tr data-start="2275" data-end="2293"><th data-start="2275" data-end="2280" data-col-size="sm">问题</th><th data-start="2280" data-end="2285" data-col-size="sm">原因</th><th data-start="2285" data-end="2293" data-col-size="sm">排查建议</th></tr></thead><tbody data-start="2320" data-end="2516"><tr data-start="2320" data-end="2368"><td data-start="2320" data-end="2329" data-col-size="sm">网站无法访问</td><td data-start="2329" data-end="2342" data-col-size="sm">PAC地址错误或失效</td><td data-col-size="sm" data-start="2342" data-end="2368">使用Safari直接访问PAC地址确认可用性</td></tr><tr data-start="2369" data-end="2408"><td data-start="2369" data-end="2377" data-col-size="sm">无代理效果</td><td data-start="2377" data-end="2392" data-col-size="sm">PAC规则未命中目标域名</td><td data-col-size="sm" data-start="2392" data-end="2408">检查规则是否覆盖目标网站</td></tr><tr data-start="2409" data-end="2462"><td data-start="2409" data-end="2422" data-col-size="sm">系统未执行PAC逻辑</td><td data-col-size="sm" data-start="2422" data-end="2440">网络缓存或Wi-Fi设置未刷新</td><td data-col-size="sm" data-start="2440" data-end="2462">重启Wi-Fi或重启设备重新加载配置</td></tr><tr data-start="2463" data-end="2516"><td data-start="2463" data-end="2474" data-col-size="sm">部分App仍受限</td><td data-col-size="sm" data-start="2474" data-end="2490">App不走系统HTTP代理</td><td data-col-size="sm" data-start="2490" data-end="2516">可考虑结合VPN使用或使用规则路由设备侧代理</td></tr></tbody></table><div class="sticky end-(--thread-content-margin) h-0 self-end select-none"><div class="absolute end-0 flex items-end" style="height: 33px;"><span class="" data-state="closed"></span></div></div></div></div>
+<hr data-start="2518" data-end="2521" class="">
+<h2 data-start="2523" data-end="2542" class="">六、PAC文件的优势与局限性分析</h2>
+<h3 data-start="2544" data-end="2551" class="">优势：</h3>
+<ul data-start="2553" data-end="2665">
+<li data-start="2553" data-end="2570" class="">
+<p data-start="2555" data-end="2570" class=""><strong data-start="2555" data-end="2563">无需越狱</strong>，系统级配置；</p>
+</li>
+<li data-start="2571" data-end="2589" class="">
+<p data-start="2573" data-end="2589" class=""><strong data-start="2573" data-end="2583">规则灵活可控</strong>，按需分流；</p>
+</li>
+<li data-start="2590" data-end="2607" class="">
+<p data-start="2592" data-end="2607" class=""><strong data-start="2592" data-end="2606">适合浏览器类访问场景</strong>；</p>
+</li>
+<li data-start="2608" data-end="2631" class="">
+<p data-start="2610" data-end="2631" class=""><strong data-start="2610" data-end="2621">节省流量和资源</strong>（只代理必要请求）；</p>
+</li>
+<li data-start="2632" data-end="2665" class="">
+<p data-start="2634" data-end="2665" class=""><strong data-start="2634" data-end="2644">与VPN共存</strong>（理论上可与某些VPN实现复合代理逻辑）。</p>
+</li>
+</ul>
+<h3 data-start="2667" data-end="2674" class="">局限：</h3>
+<ul data-start="2676" data-end="2777">
+<li data-start="2676" data-end="2711" class="">
+<p data-start="2678" data-end="2711" class=""><strong data-start="2678" data-end="2698">仅适用于HTTP/HTTPS请求</strong>，部分App流量可能绕过；</p>
+</li>
+<li data-start="2712" data-end="2736" class="">
+<p data-start="2714" data-end="2736" class=""><strong data-start="2714" data-end="2727">iOS系统缓存机制</strong>，可能不及时生效；</p>
+</li>
+<li data-start="2737" data-end="2757" class="">
+<p data-start="2739" data-end="2757" class=""><strong data-start="2739" data-end="2756">依赖稳定可访问的PAC地址</strong>；</p>
+</li>
+<li data-start="2758" data-end="2777" class="">
+<p data-start="2760" data-end="2777" class=""><strong data-start="2760" data-end="2776">对规则语法有一定学习门槛</strong>。</p>
+</li>
+</ul>
+<p data-start="2779" data-end="2849" class="">因此，如果你需要更强的全局代理、加密隧道等功能，PAC可作为前置逻辑，结合VPN、Clash、Quantumult等工具进一步增强使用体验。</p>
+<hr data-start="2851" data-end="2854" class="">
+<h2 data-start="2856" data-end="2877" class="">七、进阶建议：让你的PAC配置更智能</h2>
+<ol data-start="2879" data-end="3069">
+<li data-start="2879" data-end="2929" class="">
+<p data-start="2882" data-end="2929" class=""><strong data-start="2882" data-end="2894">托管到CDN平台</strong>（如Cloudflare Pages、Vercel），提高访问稳定性；</p>
+</li>
+<li data-start="2930" data-end="2957" class="">
+<p data-start="2933" data-end="2957" class=""><strong data-start="2933" data-end="2944">定期更新规则库</strong>（如引用gfwlist）；</p>
+</li>
+<li data-start="2958" data-end="2988" class="">
+<p data-start="2961" data-end="2988" class=""><strong data-start="2961" data-end="2973">使用多PAC入口</strong>：主配置+备用配置，增强容灾；</p>
+</li>
+<li data-start="2989" data-end="3024" class="">
+<p data-start="2992" data-end="3024" class=""><strong data-start="2992" data-end="3005">启用HTTPS访问</strong>：保障PAC文件在传输过程中的完整性；</p>
+</li>
+<li data-start="3025" data-end="3069" class="">
+<p data-start="3028" data-end="3069" class=""><strong data-start="3028" data-end="3041">使用GeoIP判断</strong>：根据地理位置自动调整代理策略（进阶PAC脚本可实现）。</p>
+</li>
+</ol>
+<hr data-start="3071" data-end="3074" class="">
+<h2 data-start="3076" data-end="3099" class="">八、结语：科学上网的第一课，从PAC开始</h2>
+<p data-start="3101" data-end="3197" class="">PAC文件配置虽然只是科学上网的一个环节，但它却可能是你在iOS设备上实现自由访问的<strong data-start="3143" data-end="3151">第一扇门</strong>。无需依赖复杂的工具，无需更改系统权限，仅通过几步设置，即可赋予你的设备强大的网络调度能力。</p>
+<p data-start="3199" data-end="3251" class="">在这个信息稀缺与信息泛滥并存的时代，善用技术手段，为自己的信息获取自由铺路，是每个数字公民的权利与责任。</p>
+<hr data-start="3253" data-end="3256" class="">
+<h2 data-start="3258" data-end="3282" class="">点评：技术与体验的完美结合，真正为用户赋能</h2>
+<p data-start="3284" data-end="3470" class="">这篇文章并没有停留在“教你操作”层面，而是从<strong data-start="3306" data-end="3329">技术原理、配置步骤到使用场景与优化建议</strong>进行了全方位解析。不仅讲清了PAC的“是什么”，更讲透了“为什么这么做”、“怎么做得更好”。语言简洁不失张力，既兼顾了新手的理解门槛，又保留了足够的技术深度，是一篇<strong data-start="3411" data-end="3435">极具实用价值与指导意义的科学上网配置宝典</strong>。值得每一位追求网络自由、热衷技术探索的iOS用户收藏转发，长期参考。</p>
+<p data-start="3472" data-end="3523" class="">如果你需要，我还可以为你提供<strong data-start="3486" data-end="3499">通用PAC模板示例</strong>或<strong data-start="3500" data-end="3514">PAC脚本生成器推荐</strong>，是否需要我补充？</p>                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-112058.htm">老鱼科学上网：解锁全球网络的无限可能</a></p>
+                                        <p>下一个：<a href="/news/article-112417.htm">手机科学上网完全指南：一步步教你实现自由上网</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-108153.htm" title="Clash使用指南：打造属于你的高效、灵活、安全的网络代理系统">Clash使用指南：打造属于你的高效、灵活、安全的网络代理系统</a></li>
+                        <li class="py-2"><a href="/news/article-109798.htm" title="科学上网的兴起与传统网络的深刻变革">科学上网的兴起与传统网络的深刻变革</a></li>
+                        <li class="py-2"><a href="/news/article-111491.htm" title="Zeno Clash 2 汉化指南：提升中文玩家游戏体验">Zeno Clash 2 汉化指南：提升中文玩家游戏体验</a></li>
+                        <li class="py-2"><a href="/news/article-107395.htm" title="科学上网IP被封的应对策略与常见问题解答：确保畅通无阻的上网体验">科学上网IP被封的应对策略与常见问题解答：确保畅通无阻的上网体验</a></li>
+                        <li class="py-2"><a href="/news/article-103512.htm" title="科学上网与游戏加速：提升网络体验的终极指南">科学上网与游戏加速：提升网络体验的终极指南</a></li>
+                        <li class="py-2"><a href="/news/article-108963.htm" title="深入解析“clash”与“collided”的区别与用法">深入解析“clash”与“collided”的区别与用法</a></li>
+                        <li class="py-2"><a href="/news/article-112763.htm" title="掌握 Clash 核心玩法：适配订阅的加速器全面指南与实战经验分享">掌握 Clash 核心玩法：适配订阅的加速器全面指南与实战经验分享</a></li>
+                        <li class="py-2"><a href="/news/article-105357.htm" title="突破网络限制的艺术：Hosts文件科学上网终极指南">突破网络限制的艺术：Hosts文件科学上网终极指南</a></li>
+                        <li class="py-2"><a href="/news/article-103929.htm" title="解锁互联网自由：极速科学上网app的完美选择">解锁互联网自由：极速科学上网app的完美选择</a></li>
+                        <li class="py-2"><a href="/news/article-108149.htm" title="如何通过TestFlight高效使用V2Ray：一步步实现超高速科学上网">如何通过TestFlight高效使用V2Ray：一步步实现超高速科学上网</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">14</span> <a href="/date/2025-05/" title="2025-05 归档">2025-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">14</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+        <style>
+    .video-heading {
+        max-width: 750px;
+        margin: 0 auto;
+    }
+
+    .video-heading h3 {
+        font-size: 60px;
+        opacity: 0.8;
+        line-height: 58px;
+        font-weight: 300;
+        text-transform: capitalize;
+        color: #fff;
+    }
+
+    .video-responsive {
+        padding-bottom: 600px;
+        position: relative;
+        width: 100%;
+    }
+
+    .canvas,
+    .video {
+        left: 0;
+        position: absolute;
+        top: 0;
+        background: #000;
+        z-index: 5;
+        overflow: hidden;
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+    }
+
+    #over_video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        top: 0;
+        z-index: 10;
+        color: #FFF;
+    }
+
+    .bg-mask {
+        background: rgba(0, 0, 0, 0.3);
+        height: inherit;
+        display: grid;
+        align-items: center;
+        padding: 0 15px;
+    }
+
+    @media screen and (max-width: 568px) {
+
+        .canvas,
+        .video {
+            height: 400px;
+        }
+
+        .video-responsive {
+            padding-bottom: 400px;
+        }
+
+
+        .video-heading h3 {
+            font-size: 35px;
+            line-height: 48px;
+            margin-bottom: 20px;
+        }
+    }
+    </style>
+    <script src="/assets/website/js/frontend/vmess_node/canvas-video-player.js"></script>
+    <script>
+    var isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
+
+    if (isIOS) {
+
+        var canvasVideo = new CanvasVideoPlayer({
+            videoSelector: '.video',
+            canvasSelector: '.canvas',
+            timelineSelector: false,
+            autoplay: true,
+            makeLoop: true,
+            pauseOnClick: false,
+            audio: false
+        });
+
+    } else {
+
+        // Use HTML5 video
+        document.querySelectorAll('.canvas')[0].style.display = 'none';
+
+    }
+    </script>
+    <!-- scripts -->
+    <footer>
+        <!-- footer -->
+        <section class="w3l-footer">
+            <div class="w3l-footer-16-main py-5">
+                <div class="container">
+                    <div class="d-flex below-section justify-content-between align-items-center pt-4 mt-5">
+                        <div class="columns text-lg-left text-center">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>VPN Login 订阅中文网 版权所有 Powered by WordPress
+                            </p>
+                        </div>
+                        <div class="columns-2 mt-lg-0 mt-3">
+                            <ul class="social">
+                                <li><a href="#facebook"><span class="fa fa-facebook" aria-hidden="true"></span></a>
+                                </li>
+                                <li><a href="#linkedin"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+                                </li>
+                                <li><a href="#twitter"><span class="fa fa-twitter" aria-hidden="true"></span></a>
+                                </li>
+                                <li><a href="#google"><span class="fa fa-google-plus" aria-hidden="true"></span></a>
+                                </li>
+                                <li><a href="#github"><span class="fa fa-github" aria-hidden="true"></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- move top -->
+            <button onclick="topFunction()" id="movetop" title="Go to top">
+                <span class="fa fa-angle-up"></span>
+            </button>
+            <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("movetop").style.display = "block";
+                } else {
+                    document.getElementById("movetop").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+            </script>
+            <!-- //move top -->
+            <script>
+            $(function() {
+                $('.navbar-toggler').click(function() {
+                    $('body').toggleClass('noscroll');
+                })
+            });
+            </script>
+        </section>
+        <!-- //footer -->
+    </footer>
+    <!-- jQuery -->
+    <script src="/assets/website/js/frontend/vmess_node/jquery-3.5.1.min.js"></script>
+    <!-- Template JavaScript -->
+    <!-- stats number counter-->
+    <script src="/assets/website/js/frontend/vmess_node/jquery.waypoints.min.js"></script>
+    <script src="/assets/website/js/frontend/vmess_node/jquery.countup.js"></script>
+    <script>
+    $('.counter').countUp();
+    </script>
+    <!-- //stats number counter -->
+    <script src="/assets/website/js/frontend/vmess_node/jquery.magnific-popup.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('.popup-with-zoom-anim').magnificPopup({
+            type: 'inline',
+
+            fixedContentPos: false,
+            fixedBgPos: true,
+
+            overflowY: 'auto',
+
+            closeBtnInside: true,
+            preloader: false,
+
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-zoom-in'
+        });
+
+        $('.popup-with-move-anim').magnificPopup({
+            type: 'inline',
+
+            fixedContentPos: false,
+            fixedBgPos: true,
+
+            overflowY: 'auto',
+
+            closeBtnInside: true,
+            preloader: false,
+
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-slide-bottom'
+        });
+    });
+    </script>
+    <script src="/assets/website/js/frontend/vmess_node/owl.carousel.js"></script>
+    <!-- testimonials for owlcarousel -->
+    <script>
+    $(document).ready(function() {
+        $('.owl-one').owlCarousel({
+            loop: true,
+            margin: 0,
+            nav: false,
+            responsiveClass: true,
+            autoplay: false,
+            autoplayTimeout: 5000,
+            autoplaySpeed: 1000,
+            autoplayHoverPause: false,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false
+                },
+                480: {
+                    items: 1,
+                    nav: false
+                },
+                667: {
+                    items: 1,
+                    nav: false
+                },
+                1000: {
+                    items: 1,
+                    nav: false
+                }
+            }
+        })
+    })
+    </script>
+    <!-- //testimonials script for owlcarousel -->
+    <!-- for blog carousel slider -->
+    <script>
+    $(document).ready(function() {
+        $('.owl-two').owlCarousel({
+            stagePadding: 20,
+            margin: 15,
+            nav: false,
+            loop: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        })
+    })
+    </script>
+    <!-- //for blog carousel slider -->
+    <script>
+    var lFollowX = 0,
+        lFollowY = 0,
+        x = 0,
+        y = 0,
+        friction = 1 / 30;
+
+    function animate() {
+        x += (lFollowX - x) * friction;
+        y += (lFollowY - y) * friction;
+
+        translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+
+        $('.banner-image').css({
+            '-webit-transform': translate,
+            '-moz-transform': translate,
+            'transform': translate
+        });
+
+        window.requestAnimationFrame(animate);
+    }
+
+    $(window).on('mousemove click', function(e) {
+
+        var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
+        var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+        lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+        lFollowY = (10 * lMouseY) / 100;
+
+    });
+
+    animate();
+    </script>
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+    $(function() {
+        $('.navbar-toggler').click(function() {
+            $('body').toggleClass('noscroll');
+        })
+    });
+    </script>
+    <!--/MENU-JS-->
+    <script>
+    $(window).on("scroll", function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 80) {
+            $("#site-header").addClass("nav-fixed");
+        } else {
+            $("#site-header").removeClass("nav-fixed");
+        }
+    });
+
+    //Main navigation Active Class Add Remove
+    $(".navbar-toggler").on("click", function() {
+        $("header").toggleClass("active");
+    });
+    $(document).on("ready", function() {
+        if ($(window).width() > 991) {
+            $("header").removeClass("active");
+        }
+        $(window).on("resize", function() {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+        });
+    });
+    </script>
+    <!--//MENU-JS-->
+    <!-- Bootstrap JS -->
+    <script src="/assets/website/js/frontend/vmess_node/bootstrap.min.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
