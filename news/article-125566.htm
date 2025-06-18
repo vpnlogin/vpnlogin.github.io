@@ -1,0 +1,503 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnlogin.github.io/news/article-125566.htm" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>掌握Clash：从零开始打造你的智能代理网络环境</title>
+        <meta name="description" content="在当今互联网环境中，网络自由与隐私保护已成为数字公民的基本需求。Clash作为一款开源的网络代理工具，凭借其高度可定制性和多协议支持，正在成为技术爱好者和隐私关注者的首选解决方案。本文将带你全面了解C" />
+        <link rel="icon" href="/assets/website/img/vmess_node/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN Login 订阅中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnlogin.github.io/news/article-125566.htm" />
+    <meta property="og:site_name" content="VPN Login 订阅中文网" />
+    <meta property="og:title" content="掌握Clash：从零开始打造你的智能代理网络环境" />
+    <meta property="og:image" content="https://vpnlogin.github.io/uploads/20240804-1/7c23757186e3fe6ade8fb1fcb3c8ca7b.webp" />
+        <meta property="og:release_date" content="2025-06-17T08:58:31" />
+    <meta property="og:updated_time" content="2025-06-17T08:58:31" />
+        <meta property="og:description" content="在当今互联网环境中，网络自由与隐私保护已成为数字公民的基本需求。Clash作为一款开源的网络代理工具，凭借其高度可定制性和多协议支持，正在成为技术爱好者和隐私关注者的首选解决方案。本文将带你全面了解C" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="掌握Clash：从零开始打造你的智能代理网络环境">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <!-- google fonts -->
+    <link href="//fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/assets/website/css/vmess_node/style-starter.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KBC970KMK2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KBC970KMK2');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854" crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--header-->
+    <div class="w3l-top-header">
+        <header id="site-header" class="fixed-top">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-dark stroke">
+                    <a class="navbar-brand" href="/">
+                                        <span>VPN Login</span>
+                                        </a>
+                    <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                        <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                        <ul class="navbar-nav mx-auto">
+                                                        <li class="nav-item">
+                                <a class="nav-link" href="/">首页</a>
+                            </li>
+                                                        <li class="nav-item">
+                                <a class="nav-link" href="/paid-subscribe/">推荐机场</a>
+                            </li>
+                                                        <li class="nav-item">
+                                <a class="nav-link" href="/news/">新闻资讯</a>
+                            </li>
+                                                        <li class="nav-item">
+                                <a class="nav-link" href="/client.htm">客户端</a>
+                            </li>
+                                                    </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <!--/header-->
+    <!-- breadcrum -->
+    <section class="w3l-deal-breadcrum">
+        <div class="breadcrum py-5">
+            <div class="container">
+                <h1>掌握Clash：从零开始打造你的智能代理网络环境</h1>
+                <p><a href="/">首页</a> &nbsp; / &nbsp; <a href="/news/">新闻资讯</a>  &nbsp; / &nbsp; 正文</p>
+            </div>
+        </div>
+    </section>
+    <!-- //breadcrum -->
+        <!-- //stats -->
+    <section class="w3l-index2 py-5" id="about">
+        <div class="container py-lg-3">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      <p>在当今互联网环境中，网络自由与隐私保护已成为数字公民的基本需求。Clash作为一款开源的网络代理工具，凭借其高度可定制性和多协议支持，正在成为技术爱好者和隐私关注者的首选解决方案。本文将带你全面了解Clash的核心价值，并提供一份详尽的安装配置指南，助你构建个性化的智能代理网络。  </p>  <h2>一、Clash为何成为现代网络管理的利器</h2>  <p>Clash不仅仅是一个简单的代理工具，它是一个完整的网络流量管理系统。其独特之处在于将传统代理功能与智能路由规则相结合，让用户能够根据不同网络需求自动切换连接方式。想象一下，当你访问国内网站时自动使用直连，访问国际资源时智能选择最优节点，同时所有敏感流量都通过加密通道传输——这正是Clash带来的革命性体验。  </p>  <p>该工具支持Shadowsocks、VMess、Trojan等主流协议，意味着无论你使用何种代理服务，Clash都能完美兼容。更值得称道的是其规则引擎，允许用户基于域名、IP、地理位置等数十种条件创建复杂的流量分流策略，这种灵活性在同类工具中实属罕见。  </p>  <h2>二、精心准备的安装全流程</h2>  <h3>1. 获取官方软件包</h3>  <p>访问Clash的GitHub仓库时，你会注意到开发者提供了针对不同操作系统的编译版本。Windows用户应选择带有".exe"后缀的可执行文件，macOS用户则需要寻找".dmg"或".zip"格式的安装包。Linux爱好者可根据发行版选择对应的二进制文件或源码包。特别提醒：务必从官方仓库下载，避免第三方修改版本可能带来的安全隐患。  </p>  <h3>2. 系统专属安装指南</h3>  <p><strong>Windows平台</strong>：解压下载的压缩包后，建议将整个文件夹放置在非系统盘的程序目录中。创建桌面快捷方式能方便日常启动。首次运行时，防火墙可能会弹出警告，此时需要允许Clash通过防火墙。  </p>  <p><strong>macOS系统</strong>：解压后直接将可执行文件拖入应用程序文件夹。由于macOS的Gatekeeper安全机制，你可能需要在系统偏好设置的"安全性与隐私"中手动批准运行。对于追求完美的用户，还可以使用Homebrew通过命令行<code>brew install clash</code>进行安装。  </p>  <p><strong>Linux环境</strong>：解压后通过终端进入所在目录，先执行<code>chmod +x clash</code>赋予执行权限。建议将可执行文件移动到<code>/usr/local/bin</code>目录以便全局调用。系统服务配置高手可以创建systemd单元文件实现开机自启。  </p>  <h2>三、深度配置的艺术</h2>  <h3>1. 配置文件的奥秘</h3>  <p>Clash的核心在于其YAML格式的配置文件，这个看似简单的文本文件实则包含着强大的控制逻辑。典型配置文件包含三大核心部分：  </p>  <ul> <li><strong>代理节点</strong>：定义所有可用的服务器连接信息  </li> <li><strong>规则集合</strong>：制定流量分流的具体策略  </li> <li><strong>其他设置</strong>：包括DNS、日志级别等高级选项  </li> </ul>  <p>专业用户往往会维护多个配置文件，分别对应工作、娱乐等不同场景，通过快捷切换实现网络行为的精准控制。  </p>  <h3>2. 图形界面管理工具</h3>  <p>对于不习惯命令行操作的用户，Clash for Windows、ClashX(macOS)等图形化前端提供了直观的操作界面。这些工具不仅简化了节点切换和规则更新，还集成了延迟测试、流量统计等实用功能。部分高级版本甚至支持策略组负载均衡，自动选择延迟最低的节点。  </p>  <h2>四、实战应用技巧</h2>  <h3>1. 智能分流策略设计</h3>  <p>Clash最强大的功能莫过于其精细化的流量控制能力。通过合理配置规则，你可以实现：  </p>  <ul> <li>国内直连：所有.cn域名和国内IP范围不经过代理  </li> <li>学术自由：将Google Scholar、arXiv等学术资源定向到特定节点  </li> <li>媒体解锁：为Netflix、Hulu等流媒体配置专用代理  </li> <li>广告拦截：利用规则屏蔽已知广告域名  </li> </ul>  <h3>2. 多设备协同方案</h3>  <p>在局域网环境中，你可以将运行Clash的电脑配置为网关，其他设备通过它接入网络。更优雅的解决方案是使用Clash的RESTful API接口，开发手机APP或浏览器插件实现统一控制。  </p>  <h2>五、安全与性能调优</h2>  <h3>1. 安全防护措施</h3>  <ul> <li>定期更新客户端和规则  </li> <li>启用TLS证书验证防止中间人攻击  </li> <li>配置IP伪装规则防止DNS泄漏  </li> <li>使用ACL规则限制未经授权的访问  </li> </ul>  <h3>2. 性能优化秘籍</h3>  <ul> <li>启用UDP转发提升视频通话质量  </li> <li>调整并发连接数平衡速度与稳定性  </li> <li>使用"url-test"策略自动选择最优节点  </li> <li>开启TUN模式实现全局透明代理  </li> </ul>  <h2>专业点评：Clash的技术哲学</h2>  <p>Clash代表了代理工具发展的新方向——从单一功能向平台化演进。它将网络控制权真正交还给用户，每个人都可以成为自己网络环境的设计师。这种设计哲学与Unix的"单一程序做好一件事"理念一脉相承，通过模块化架构实现了惊人的灵活性。  </p>  <p>相比传统VPN工具，Clash的规则引擎实现了网络流量的智能化管理，这种"条件触发式"代理模式更符合现代互联网的使用场景。而其开放式的架构允许社区不断贡献新功能和插件，形成了良性的生态循环。  </p>  <p>值得注意的是，Clash的学习曲线确实比简单代理工具陡峭，但这种复杂性换来的是无与伦比的控制精度。正如一位资深用户所说："当你完全掌握Clash后，网络世界就像一本打开的书，每个字节的流向都在你的掌控之中。"这种深度的可控性，正是技术爱好者追求的最高境界。  </p>  <p>在数字权利日益受到关注的今天，Clash这类工具的出现不仅解决了实际问题，更代表了一种网络自由的精神。它提醒我们：在复杂的网络环境中，技术可以成为保护隐私、突破限制的利器，关键在于我们如何使用它。</p>                 </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-125240.htm">电报群访问全攻略：科学上网的必要性与实用技巧</a></p>
+                                        <p>下一个：<a href="/news/article-125903.htm">突破网络藩篱：SS科学上网节点的深度解析与实战指南</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-121388.htm" title="决斗链接全球畅玩指南：全方位科学上网解决方案深度解析">决斗链接全球畅玩指南：全方位科学上网解决方案深度解析</a></li>
+                        <li class="py-2"><a href="/news/article-116107.htm" title="手把手教你用好 Shadowrocket：从下载到配置的完整指南">手把手教你用好 Shadowrocket：从下载到配置的完整指南</a></li>
+                        <li class="py-2"><a href="/news/article-110679.htm" title="全面解析Vmess收费代理及其使用方法：安全、稳定与高效的网络选择">全面解析Vmess收费代理及其使用方法：安全、稳定与高效的网络选择</a></li>
+                        <li class="py-2"><a href="/news/article-113382.htm" title="征服星辰战场：全面解析《星辰Clash》的玩法精髓与制胜之道">征服星辰战场：全面解析《星辰Clash》的玩法精髓与制胜之道</a></li>
+                        <li class="py-2"><a href="/news/article-124261.htm" title="量子Ult无法添加配置？终极排查与解决方案全解析">量子Ult无法添加配置？终极排查与解决方案全解析</a></li>
+                        <li class="py-2"><a href="/news/article-112058.htm" title="老鱼科学上网：解锁全球网络的无限可能">老鱼科学上网：解锁全球网络的无限可能</a></li>
+                        <li class="py-2"><a href="/news/article-120774.htm" title="黑莓Q30突破网络限制：终极科学上网指南与实战技巧">黑莓Q30突破网络限制：终极科学上网指南与实战技巧</a></li>
+                        <li class="py-2"><a href="/news/article-113980.htm" title="深入解析“clash”音标：掌握英语发音的关键">深入解析“clash”音标：掌握英语发音的关键</a></li>
+                        <li class="py-2"><a href="/news/article-122023.htm" title="空中利剑的交锋：深度解析Air Clash的现代军事内涵与战略影响">空中利剑的交锋：深度解析Air Clash的现代军事内涵与战略影响</a></li>
+                        <li class="py-2"><a href="/news/article-117995.htm" title="手机上网的技术底气：一份来自电脑科学的实用指南">手机上网的技术底气：一份来自电脑科学的实用指南</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2025-06/" title="2025-06 归档">2025-06</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2025-05/" title="2025-05 归档">2025-05</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+        <style>
+    .video-heading {
+        max-width: 750px;
+        margin: 0 auto;
+    }
+
+    .video-heading h3 {
+        font-size: 60px;
+        opacity: 0.8;
+        line-height: 58px;
+        font-weight: 300;
+        text-transform: capitalize;
+        color: #fff;
+    }
+
+    .video-responsive {
+        padding-bottom: 600px;
+        position: relative;
+        width: 100%;
+    }
+
+    .canvas,
+    .video {
+        left: 0;
+        position: absolute;
+        top: 0;
+        background: #000;
+        z-index: 5;
+        overflow: hidden;
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+    }
+
+    #over_video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        top: 0;
+        z-index: 10;
+        color: #FFF;
+    }
+
+    .bg-mask {
+        background: rgba(0, 0, 0, 0.3);
+        height: inherit;
+        display: grid;
+        align-items: center;
+        padding: 0 15px;
+    }
+
+    @media screen and (max-width: 568px) {
+
+        .canvas,
+        .video {
+            height: 400px;
+        }
+
+        .video-responsive {
+            padding-bottom: 400px;
+        }
+
+
+        .video-heading h3 {
+            font-size: 35px;
+            line-height: 48px;
+            margin-bottom: 20px;
+        }
+    }
+    </style>
+    <script src="/assets/website/js/frontend/vmess_node/canvas-video-player.js"></script>
+    <script>
+    var isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
+
+    if (isIOS) {
+
+        var canvasVideo = new CanvasVideoPlayer({
+            videoSelector: '.video',
+            canvasSelector: '.canvas',
+            timelineSelector: false,
+            autoplay: true,
+            makeLoop: true,
+            pauseOnClick: false,
+            audio: false
+        });
+
+    } else {
+
+        // Use HTML5 video
+        document.querySelectorAll('.canvas')[0].style.display = 'none';
+
+    }
+    </script>
+    <!-- scripts -->
+    <footer>
+        <!-- footer -->
+        <section class="w3l-footer">
+            <div class="w3l-footer-16-main py-5">
+                <div class="container">
+                    <div class="d-flex below-section justify-content-between align-items-center pt-4 mt-5">
+                        <div class="columns text-lg-left text-center">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>VPN Login 订阅中文网 版权所有 Powered by WordPress
+                            </p>
+                        </div>
+                        <div class="columns-2 mt-lg-0 mt-3">
+                            <ul class="social">
+                                <li><a href="#facebook"><span class="fa fa-facebook" aria-hidden="true"></span></a>
+                                </li>
+                                <li><a href="#linkedin"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+                                </li>
+                                <li><a href="#twitter"><span class="fa fa-twitter" aria-hidden="true"></span></a>
+                                </li>
+                                <li><a href="#google"><span class="fa fa-google-plus" aria-hidden="true"></span></a>
+                                </li>
+                                <li><a href="#github"><span class="fa fa-github" aria-hidden="true"></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- move top -->
+            <button onclick="topFunction()" id="movetop" title="Go to top">
+                <span class="fa fa-angle-up"></span>
+            </button>
+            <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("movetop").style.display = "block";
+                } else {
+                    document.getElementById("movetop").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+            </script>
+            <!-- //move top -->
+            <script>
+            $(function() {
+                $('.navbar-toggler').click(function() {
+                    $('body').toggleClass('noscroll');
+                })
+            });
+            </script>
+        </section>
+        <!-- //footer -->
+    </footer>
+    <!-- jQuery -->
+    <script src="/assets/website/js/frontend/vmess_node/jquery-3.5.1.min.js"></script>
+    <!-- Template JavaScript -->
+    <!-- stats number counter-->
+    <script src="/assets/website/js/frontend/vmess_node/jquery.waypoints.min.js"></script>
+    <script src="/assets/website/js/frontend/vmess_node/jquery.countup.js"></script>
+    <script>
+    $('.counter').countUp();
+    </script>
+    <!-- //stats number counter -->
+    <script src="/assets/website/js/frontend/vmess_node/jquery.magnific-popup.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('.popup-with-zoom-anim').magnificPopup({
+            type: 'inline',
+
+            fixedContentPos: false,
+            fixedBgPos: true,
+
+            overflowY: 'auto',
+
+            closeBtnInside: true,
+            preloader: false,
+
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-zoom-in'
+        });
+
+        $('.popup-with-move-anim').magnificPopup({
+            type: 'inline',
+
+            fixedContentPos: false,
+            fixedBgPos: true,
+
+            overflowY: 'auto',
+
+            closeBtnInside: true,
+            preloader: false,
+
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-slide-bottom'
+        });
+    });
+    </script>
+    <script src="/assets/website/js/frontend/vmess_node/owl.carousel.js"></script>
+    <!-- testimonials for owlcarousel -->
+    <script>
+    $(document).ready(function() {
+        $('.owl-one').owlCarousel({
+            loop: true,
+            margin: 0,
+            nav: false,
+            responsiveClass: true,
+            autoplay: false,
+            autoplayTimeout: 5000,
+            autoplaySpeed: 1000,
+            autoplayHoverPause: false,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false
+                },
+                480: {
+                    items: 1,
+                    nav: false
+                },
+                667: {
+                    items: 1,
+                    nav: false
+                },
+                1000: {
+                    items: 1,
+                    nav: false
+                }
+            }
+        })
+    })
+    </script>
+    <!-- //testimonials script for owlcarousel -->
+    <!-- for blog carousel slider -->
+    <script>
+    $(document).ready(function() {
+        $('.owl-two').owlCarousel({
+            stagePadding: 20,
+            margin: 15,
+            nav: false,
+            loop: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        })
+    })
+    </script>
+    <!-- //for blog carousel slider -->
+    <script>
+    var lFollowX = 0,
+        lFollowY = 0,
+        x = 0,
+        y = 0,
+        friction = 1 / 30;
+
+    function animate() {
+        x += (lFollowX - x) * friction;
+        y += (lFollowY - y) * friction;
+
+        translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+
+        $('.banner-image').css({
+            '-webit-transform': translate,
+            '-moz-transform': translate,
+            'transform': translate
+        });
+
+        window.requestAnimationFrame(animate);
+    }
+
+    $(window).on('mousemove click', function(e) {
+
+        var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
+        var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+        lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+        lFollowY = (10 * lMouseY) / 100;
+
+    });
+
+    animate();
+    </script>
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+    $(function() {
+        $('.navbar-toggler').click(function() {
+            $('body').toggleClass('noscroll');
+        })
+    });
+    </script>
+    <!--/MENU-JS-->
+    <script>
+    $(window).on("scroll", function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 80) {
+            $("#site-header").addClass("nav-fixed");
+        } else {
+            $("#site-header").removeClass("nav-fixed");
+        }
+    });
+
+    //Main navigation Active Class Add Remove
+    $(".navbar-toggler").on("click", function() {
+        $("header").toggleClass("active");
+    });
+    $(document).on("ready", function() {
+        if ($(window).width() > 991) {
+            $("header").removeClass("active");
+        }
+        $(window).on("resize", function() {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+        });
+    });
+    </script>
+    <!--//MENU-JS-->
+    <!-- Bootstrap JS -->
+    <script src="/assets/website/js/frontend/vmess_node/bootstrap.min.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
