@@ -404,44 +404,9 @@ systemctl </span><span><span class="hljs-built_in">enable</span></span><span> v2
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 的核心组件有哪些？</h5></div>
-    <div class="panel-body">
-        V2Ray 的核心由 inbound、outbound、routing、policy 等模块组成。Inbound 处理入站请求，Outbound 负责出站连接，Routing 管理流量分流策略。模块化的设计让用户可以自由组合代理方式。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>WinXray 是否支持订阅自动更新？</h5></div>
     <div class="panel-body">
         是的，WinXray 支持定时订阅更新。用户可在设置中开启自动更新周期（如每天或每小时），程序会自动下载新节点并替换旧配置，确保使用最新的线路资源。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 的规则文件如何支持广告屏蔽？</h5></div>
-    <div class="panel-body">
-        规则文件可添加广告域名或 URL 列表，将请求重定向或阻断。结合策略组和自动更新，Surfboard 可实现全局广告屏蔽，提高浏览体验并节省带宽。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 的 mKCP 参数如何调优以适应不稳定链路？</h5></div>
-    <div class="panel-body">
-        mKCP 有多个参数如 mtu、tinterval、uplink/downlink 等，可通过降低 mtu 与增大 mtu 重试间隔来适应高丢包场景；启用 FEC 与调整窗口大小能提高容错性，最终需在实际网络环境中逐步调试获得最佳值。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 服务器启动后提示端口被占用，该如何处理？</h5></div>
-    <div class="panel-body">
-        先用 netstat 或 ss 工具查看占用该端口的进程（例如 `ss -ltnp`），确认是旧进程或其他服务占用。停止占用进程或修改 V2Ray 配置端口，然后重启服务并检查防火墙规则是否开放了新端口。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>QuantumultX 支持哪些类型的重写脚本？</h5></div>
-    <div class="panel-body">
-        QuantumultX 支持 JavaScript 脚本，可修改请求头、响应内容、自动跳转、广告屏蔽和定制流量处理。结合策略组，可实现高度个性化的网络访问控制和优化。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Mihomo 的节点批量操作功能有哪些优势？</h5></div>
-    <div class="panel-body">
-        Mihomo 支持批量导入、删除和更新节点，结合策略组管理，可高效维护大量节点。用户可以快速选择最佳节点，优化访问速度，同时减少手动操作的复杂度。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 如何兼容 Clash 的配置文件？</h5></div>
-    <div class="panel-body">
-        Sing-box 支持 Clash 规则格式的解析，用户可直接导入 Clash 的 YAML 配置文件进行使用。虽然部分高级参数需要调整，但大多数分流和策略配置都能自动识别，便于迁移。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Hysteria2 多路复用如何提升短连接性能？</h5></div>
@@ -451,7 +416,42 @@ systemctl </span><span><span class="hljs-built_in">enable</span></span><span> v2
 <div class="panel panel-default">
     <div class="panel-heading"><h5>VMess AEAD 加密在高封锁网络中有何优势？</h5></div>
     <div class="panel-body">
-        AEAD 加密能防止流量被篡改或重放，并隐藏流量特征。在高封锁网络中，使用 AEAD 可以提高节点稳定性和长期可用性，同时确保数据安全和隐蔽性。    </div>
+        AEAD 加密能防止流量被篡改或重放，并隐藏流量特征。在高封锁网络中，使用 AEAD 可以提高节点稳定性和长期可用性，同时确保数据安全和隐蔽性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Surfboard 的规则文件如何支持广告屏蔽？</h5></div>
+    <div class="panel-body">
+        规则文件可添加广告域名或 URL 列表，将请求重定向或阻断。结合策略组和自动更新，Surfboard 可实现全局广告屏蔽，提高浏览体验并节省带宽。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>V2Ray 服务器启动后提示端口被占用，该如何处理？</h5></div>
+    <div class="panel-body">
+        先用 netstat 或 ss 工具查看占用该端口的进程（例如 `ss -ltnp`），确认是旧进程或其他服务占用。停止占用进程或修改 V2Ray 配置端口，然后重启服务并检查防火墙规则是否开放了新端口。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>V2Ray 的核心组件有哪些？</h5></div>
+    <div class="panel-body">
+        V2Ray 的核心由 inbound、outbound、routing、policy 等模块组成。Inbound 处理入站请求，Outbound 负责出站连接，Routing 管理流量分流策略。模块化的设计让用户可以自由组合代理方式。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>V2Ray 的 mKCP 参数如何调优以适应不稳定链路？</h5></div>
+    <div class="panel-body">
+        mKCP 有多个参数如 mtu、tinterval、uplink/downlink 等，可通过降低 mtu 与增大 mtu 重试间隔来适应高丢包场景；启用 FEC 与调整窗口大小能提高容错性，最终需在实际网络环境中逐步调试获得最佳值。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Mihomo 的节点批量操作功能有哪些优势？</h5></div>
+    <div class="panel-body">
+        Mihomo 支持批量导入、删除和更新节点，结合策略组管理，可高效维护大量节点。用户可以快速选择最佳节点，优化访问速度，同时减少手动操作的复杂度。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>QuantumultX 支持哪些类型的重写脚本？</h5></div>
+    <div class="panel-body">
+        QuantumultX 支持 JavaScript 脚本，可修改请求头、响应内容、自动跳转、广告屏蔽和定制流量处理。结合策略组，可实现高度个性化的网络访问控制和优化。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Sing-box 如何兼容 Clash 的配置文件？</h5></div>
+    <div class="panel-body">
+        Sing-box 支持 Clash 规则格式的解析，用户可直接导入 Clash 的 YAML 配置文件进行使用。虽然部分高级参数需要调整，但大多数分流和策略配置都能自动识别，便于迁移。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -480,16 +480,16 @@ systemctl </span><span><span class="hljs-built_in">enable</span></span><span> v2
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-11-20-node-share.htm" title="VPN Login - 11月20日19.1M/S|免费Singbox节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点订阅节点连接">VPN Login - 11月20日19.1M/S|免费Singbox节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点订阅节点连接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-24-free-vpn.htm" title="VPN Login - 10月24日22.2M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/SSR节点订阅节点连接">VPN Login - 10月24日22.2M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/SSR节点订阅节点连接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-14-node-share.htm" title="VPN Login - 11月14日18.1M/S|免费V2ray节点/Clash节点/SSR节点/Shadowrocket节点/Singbox节点订阅节点连接">VPN Login - 11月14日18.1M/S|免费V2ray节点/Clash节点/SSR节点/Shadowrocket节点/Singbox节点订阅节点连接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-17-free-vpn-node.htm" title="VPN Login - 10月17日21.9M/S|免费Clash节点/V2ray节点/Singbox节点/SSR节点/Shadowrocket节点订阅节点连接">VPN Login - 10月17日21.9M/S|免费Clash节点/V2ray节点/Singbox节点/SSR节点/Shadowrocket节点订阅节点连接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-19-free-vpn.htm" title="VPN Login - 10月19日21.4M/S|免费Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/SSR节点订阅节点连接">VPN Login - 10月19日21.4M/S|免费Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/SSR节点订阅节点连接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-11-top-vpn.htm" title="VPN Login - 10月11日18.6M/S|免费Shadowrocket节点/Clash节点/V2ray节点/SSR节点/Singbox节点订阅节点连接">VPN Login - 10月11日18.6M/S|免费Shadowrocket节点/Clash节点/V2ray节点/SSR节点/Singbox节点订阅节点连接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-4-free-vpn-node.htm" title="VPN Login - 11月4日21.4M/S|免费V2ray节点/Clash节点/Shadowrocket节点/SSR节点/Singbox节点订阅节点连接">VPN Login - 11月4日21.4M/S|免费V2ray节点/Clash节点/Shadowrocket节点/SSR节点/Singbox节点订阅节点连接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-23-vpn-github.htm" title="VPN Login - 10月23日20.6M/S|免费V2ray节点/Singbox节点/SSR节点/Clash节点/Shadowrocket节点订阅节点连接">VPN Login - 10月23日20.6M/S|免费V2ray节点/Singbox节点/SSR节点/Clash节点/Shadowrocket节点订阅节点连接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-31-top-vpn-node.htm" title="VPN Login - 10月31日18.3M/S|免费V2ray节点/Singbox节点/SSR节点/Clash节点/Shadowrocket节点订阅节点连接">VPN Login - 10月31日18.3M/S|免费V2ray节点/Singbox节点/SSR节点/Clash节点/Shadowrocket节点订阅节点连接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-15-vpn-github.htm" title="VPN Login - 11月15日23M/S|免费Singbox节点/SSR节点/V2ray节点/Clash节点/Shadowrocket节点订阅节点连接">VPN Login - 11月15日23M/S|免费Singbox节点/SSR节点/V2ray节点/Clash节点/Shadowrocket节点订阅节点连接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-5-free-node-subscribe.htm" title="VPN Login - 10月5日19.4M/S|免费Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点订阅节点连接">VPN Login - 10月5日19.4M/S|免费Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点订阅节点连接</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-10-6-free-node-subscribe-links.htm" title="VPN Login - 10月6日19.8M/S|免费Clash节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点订阅节点连接">VPN Login - 10月6日19.8M/S|免费Clash节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点订阅节点连接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-20-node-share.htm" title="VPN Login - 11月20日19.1M/S|免费Singbox节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点订阅节点连接">VPN Login - 11月20日19.1M/S|免费Singbox节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点订阅节点连接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-9-vpn-node.htm" title="VPN Login - 10月9日22.5M/S|免费SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点订阅节点连接">VPN Login - 10月9日22.5M/S|免费SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点订阅节点连接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-15-vpn-proxy.htm" title="VPN Login - 10月15日19.6M/S|免费Shadowrocket节点/Singbox节点/SSR节点/V2ray节点/Clash节点订阅节点连接">VPN Login - 10月15日19.6M/S|免费Shadowrocket节点/Singbox节点/SSR节点/V2ray节点/Clash节点订阅节点连接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-24-free-vpn.htm" title="VPN Login - 10月24日22.2M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/SSR节点订阅节点连接">VPN Login - 10月24日22.2M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/SSR节点订阅节点连接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-12-free-vpn.htm" title="VPN Login - 11月12日19.4M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Clash节点/Singbox节点订阅节点连接">VPN Login - 11月12日19.4M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Clash节点/Singbox节点订阅节点连接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-10-7-node-share.htm" title="VPN Login - 10月7日20.3M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Clash节点订阅节点连接">VPN Login - 10月7日20.3M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Clash节点订阅节点连接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-26-node-share.htm" title="VPN Login - 11月26日18.3M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Clash节点/Singbox节点订阅节点连接">VPN Login - 11月26日18.3M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Clash节点/Singbox节点订阅节点连接</a></li>
                     </ul>
     </div>
 </div>
@@ -501,7 +501,7 @@ systemctl </span><span><span class="hljs-built_in">enable</span></span><span> v2
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">20</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
+                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2025-10/" title="2025-10 归档">2025-10</a></h4>
